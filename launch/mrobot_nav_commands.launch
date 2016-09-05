@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="recognizer" pkg="mrobot_speech" type="recognizer.py" output="screen">
+    <!--这里添加中文hmm的路径-->
+    <param name="hmm" value="$(find mrobot_speech)/config/zh_broadcastnews_ptm256_8000"/>
+    <!--这里添加自定义的dic和lm的路径-->
+    <param name="lm" value="$(find mrobot_speech)/config/mrobot.lm"/>
+    <param name="dict" value="$(find mrobot_speech)/config/mrobot.dic"/>
+  </node>
+  
+</launch>
